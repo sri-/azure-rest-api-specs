@@ -162,6 +162,16 @@
     "ModernReservationTransactionProperties": {
       "default": "The properties of the reservation transaction.",
       "properties": {
+        "billingProfileId":{
+          "description": "The billing Profile Id",
+          "type": "string",
+          "readOnly": true
+        },
+        "billingProfileName":{
+          "description": "The billing Profile name",
+          "type": "string",
+          "readOnly": true
+        },
         "eventDate": {
           "description": "The date of the transaction",
           "type": "string",

@@ -2,7 +2,7 @@
   "parameters": {
     "api-version": "2020-01-01",
     "billingAccountId": "fcebaabc-fced-4284-a83d-79f83dee183c:45796ba8-988f-45ad-bea9-7b71fc6c7513_2018-09-30",
-    "billingProfileId":"",
+    "billingProfileId":"e831f567-5d4f-4fc9-a448-c2da1ddcfa3c",
     "startDate":"2019-01-01",
     "endDate":"2020-01-01"
   },
@@ -21,7 +21,7 @@
                 "billingProfileName": "Contoso_BP",
                 "currency": "USD",
                 "description": "Reserved VM Instance, Standard_D1, US Central, 1 Year",
-                "eventDate": "2019-02-01",
+                "eventDate": "2019-02-01T19:19:04Z",
                 "eventType": "Cancel",
                 "invoice": "T000001234",
                 "invoiceId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c:45796ba8-988f-45ad-bea9-7b71fc6c7513_2018-09-30/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c/invoices/T000001234",
@@ -45,7 +45,7 @@
                 "billingProfileName": "Contoso_BP",
                 "currency": "USD",
                 "description": "Reserved VM Instance, Standard_D1, US Central, 1 Year",
-                "eventDate": "2019-01-26",
+                "eventDate": "2019-01-26T19:19:04Z",
                 "eventType": "Purchase",
                 "invoice": "T000007139",
                 "invoiceId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c:45796ba8-988f-45ad-bea9-7b71fc6c7513_2018-09-30/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c/invoices/T000007139",
