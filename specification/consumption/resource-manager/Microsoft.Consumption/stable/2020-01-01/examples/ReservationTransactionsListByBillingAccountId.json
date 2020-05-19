@@ -1,0 +1,64 @@
+{
+  "parameters": {
+    "api-version": "2020-01-01",
+    "billingAccountId": "fcebaabc-fced-4284-a83d-79f83dee183c",
+    "startDate":"2019-01-01",
+    "endDate":"2020-01-01"
+  },
+  "responses": {
+    "200": {
+      "body": {
+        "value": [
+          {
+            "id": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/providers/Microsoft.Consumption/reservationTransactions",
+            "name": "a838a8c3-a408-49e1-ac90-42cb95bff9b2",
+            "type": "Microsoft.Consumption/reservationTransactions",
+            "tags": [],
+            "properties": {
+                "amount": -1248.15,
+                "billingProfileId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c",
+                "billingProfileName": "Contoso_BP",
+                "currency": "USD",
+                "description": "Reserved VM Instance, Standard_D1, US Central, 1 Year",
+                "eventDate": "2019-02-01",
+                "eventType": "Cancel",
+                "invoice": "T000001234",
+                "invoiceId": "/providers/Microsoft.Billing/billingAccounts/e1bec70a-fc21-58e3-113b-37b5d2d17416/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c/invoices/T000001234",
+                "invoiceSectionId": "/providers/Microsoft.Billing/billingAccounts/e1bec70a-fc21-58e3-113b-37b5d2d17416/invoiceSections/75089510-9582-4e4c-b2b0-c53927ae4496_2018-10-08",
+                "invoiceSectionName": "Contoso",
+                "purchasingSubscriptionGuid": "d924ad15-4a3d-4047-971d-c8b1b300a97b",
+                "purchasingSubscriptionName": "Contoso",
+                "quantity": 3,
+                "reservationOrderId": "a838a8c3-a408-49e1-ac90-42cb95bff9b2",
+                "reservationOrderName": "VM_Reservation_01"
+            }
+        },
+        {
+            "id": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/providers/Microsoft.Consumption/reservationTransactions",
+            "name": "5d8d78f0-64cb-4e44-9ddb-a437c2767171",
+            "type": "Microsoft.Consumption/reservationTransactions",
+            "tags": [],
+            "properties": {
+                "amount": 1269,
+                "billingProfileId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c",
+                "billingProfileName": "Contoso_BP",
+                "currency": "USD",
+                "description": "Reserved VM Instance, Standard_D1, US Central, 1 Year",
+                "eventDate": "2019-01-26",
+                "eventType": "Purchase",
+                "invoice": "T000007139",
+                "invoiceId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/billingProfiles/e831f567-5d4f-4fc9-a448-c2da1ddcfa3c/invoices/T000007139",
+                "invoiceSectionId": "/providers/Microsoft.Billing/billingAccounts/fcebaabc-fced-4284-a83d-79f83dee183c/invoiceSections/75089510-9582-4e4c-b2b0-c53927ae4496_2018-10-08",
+                "invoiceSectionName": "Contoso",
+                "purchasingSubscriptionGuid": "d924ad15-4a3d-4047-971d-c8b1b300a97b",
+                "purchasingSubscriptionName": "Contoso",
+                "quantity": 3,
+                "reservationOrderId": "5d8d78f0-64cb-4e44-9ddb-a437c2767171",
+                "reservationOrderName": "VM_Reservation_02"
+            }
+        }        
+        ]
+      }
+    }
+  }
+}
