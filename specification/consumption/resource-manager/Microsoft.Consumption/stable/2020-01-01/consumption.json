@@ -77,9 +77,6 @@
               "$ref": "#/definitions/ErrorResponse"
             }
           }
-        },
-        "x-ms-pageable": {
-          "nextLinkName": "nextLink"
         }
       }
     },
@@ -95,7 +92,7 @@
         },
         "x-ms-examples": {
           "ReservationTransaction": {
-            "$ref": "./examples/ReservationTransactionsListByBillingProfileId.json"
+            "$ref": "./examples/ReservationTransactionsListByBillingProfile.json"
           }
         },
         "parameters": [
@@ -285,6 +282,55 @@
           "$ref": "#/definitions/ErrorDetails"
         }
       }
+    },
+    "Operation": {
+      "description": "A Consumption REST API operation.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Operation name: {provider}/{resource}/{operation}.",
+          "type": "string",
+          "readOnly": true
+        },
+        "display": {
+          "description": "The object that represents the operation.",
+          "properties": {
+            "provider": {
+              "description": "Service provider: Microsoft.Consumption.",
+              "type": "string",
+              "readOnly": true
+            },
+            "resource": {
+              "description": "Resource on which the operation is performed: UsageDetail, etc.",
+              "type": "string",
+              "readOnly": true
+            },
+            "operation": {
+              "description": "Operation type: Read, write, delete, etc.",
+              "type": "string",
+              "readOnly": true
+            }
+          }
+        }
+      }
+    },
+    "OperationListResult": {
+      "description": "Result of listing consumption operations. It contains a list of operations and a URL link to get the next set of results.",
+      "properties": {
+        "value": {
+          "description": "List of consumption operations supported by the Microsoft.Consumption resource provider.",
+          "type": "array",
+          "readOnly": true,
+          "items": {
+            "$ref": "#/definitions/Operation"
+          }
+        },
+        "nextLink": {
+          "description": "URL to get the next set of operation list results if there are any.",
+          "type": "string",
+          "readOnly": true
+        }
+      }
     }
   },
   "parameters": {
@@ -295,12 +341,37 @@
       "type": "string",
       "description": "Version of the API to be used with the client request. The current version is 2020-01-01."
     },
-    "subscriptionIdParameter": {
-      "name": "subscriptionId",
+    "billingAccountIdParameter": {
+      "name": "billingAccountId",
       "in": "path",
-      "description": "Azure Subscription ID.",
+      "description": "BillingAccount ID",
       "required": true,
-      "type": "string"
+      "type": "string",
+      "x-ms-parameter-location": "method"
+    },
+    "billingProfileIdParameter": {
+      "name": "billingProfileId",
+      "in": "path",
+      "description": "Azure Billing Profile ID.",
+      "required": true,
+      "type": "string",
+      "x-ms-parameter-location": "method"
+    },
+    "endDateParameter": {
+      "name": "endDate",
+      "in": "query",
+      "description": "End date",
+      "required": true,
+      "type": "string",
+      "x-ms-parameter-location": "method"
+    },
+    "startDateParameter": {
+      "name": "startDate",
+      "in": "query",
+      "description": "Start date",
+      "required": true,
+      "type": "string",
+      "x-ms-parameter-location": "method"
     }
   }
 }
